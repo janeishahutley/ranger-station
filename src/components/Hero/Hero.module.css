@@ -1,0 +1,181 @@
+.hero {
+    background-color: var(--bg);
+    display: flex;
+    gap:24px;
+    justify-content: space-between;
+    margin-top: 80px;
+    /* align-items: center; */
+}
+
+.sectionLeft {
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.sectionRight {
+    flex: 1;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-size: clamp(2rem, 5vw, 5.5rem);
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    line-height:1;
+    color: var(--border);
+}
+
+.text {
+   
+    margin: 16px 0 80px;
+    width: 80%;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+.image img {
+    border-radius: 16px;
+    opacity: 0.9;
+    flex: 1;
+    display: flex;
+    border: 8px solid var(--border);
+    box-shadow: 0px -25px 40px -20px rgba(0,0,0,0.45),
+                25px 0px 40px -20px rgba(0,0,0,0.45),
+                0px 25px 40px -20px rgba(0,0,0,0.45),
+                -25px 0px 40px -20px rgba(0,0,0,0.45);
+    max-width: 100%;
+
+       
+}
+
+.actionBtns {
+    display: flex;
+    gap: 32px;
+}
+.commonBtn {
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    font-size: clamp(.8rem, 1.5vw, 1.5rem);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+}
+.viewBtn {
+    background-color: var(--bg);
+    border: 2px solid var(--border);
+    color: var(--border);
+    border-bottom: 5px solid var(--text);
+    border-right: 5px solid var(--text);
+    font-weight: 600;
+    transition: transform 0.5s;
+    
+}
+
+.viewBtn:hover {
+    transform: scale(1.2);
+  
+}
+
+.buyBtn {
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    color: var(--bg);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+}
+
+.buyBtn:hover {
+    transform: scale(1.2);
+}
+
+.buyBtn > span {
+    z-index: 2;
+    position: relative;
+}
+
+.buyBtn::before {
+    content:" ";
+    position: absolute;
+    width: 200px;
+    padding: 1rem 5rem;
+    height: 100%;
+    background: linear-gradient(var(--border), var(--bg));
+    animation: rotate 4s linear infinite;
+}
+
+.buyBtn::after {
+    content:" ";
+    position: absolute;
+    background: var(--text);
+    inset: 10px;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.emphasis {
+    color: var(--border);
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* media queries */
+
+@media(max-width: 1024px) {
+    .sectionLeft {
+        width: 50%;
+    }
+    .text {
+        margin-bottom: 40px;
+    }
+    .buyBtn:hover,
+    .viewBtn:hover {
+        transform: none;
+    }
+    .buyBtn,
+    .viewBtn {
+        transition: transform 0.5s;
+    } 
+}
+
+@media(max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .sectionLeft {
+        width: 100%;
+    }
+    .heroContent {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+}
+
+@media(max-width: 1024px) {
+    .image img {
+        height: auto;
+    }
+    .hero {
+        align-items: center;
+        justify-content: center;
+    }
+}

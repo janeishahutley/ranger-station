@@ -1,0 +1,46 @@
+.links-container {
+  display: flex;
+  flex-direction: column;
+
+
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.mobile-links,
+.button {
+  display: none;
+
+}
+
+@media (max-width: 700px){
+  .links {
+    display: none;
+  }
+ 
+  .mobile-links {
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    right: 0;
+    width: 50%;
+    height: calc(100vh - 100px);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+  }
+  .button {
+    display: block;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,7 @@
+.border {
+    background-color: var(--border);
+    opacity: .5;
+    height: 1px;
+    display: flex;
+    flex: 1;
+}

@@ -1,0 +1,173 @@
+.container {
+    display: flex;
+    flex:1;
+}
+
+.card {
+    background-color:#bb9fd1; 
+    background-color:var(--bg); 
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    border-radius: 8px;
+    box-shadow: 0px -10px 10px -10px rgba(0,0,0,0.45),
+    10px 0px 10px -10px rgba(0,0,0,0.45),
+    0px 10px 10px -10px rgba(0,0,0,0.45),
+    -10px 0px 10px -10px rgba(0,0,0,0.45);
+
+    position: relative;
+}
+
+.card:last-child {
+    margin-bottom: 16px;
+}
+
+.image {
+    position: relative;
+    width: 30%;
+    height: auto;
+    
+}
+
+.image img {
+    display: flex;
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
+    object-fit:cover;
+    flex: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px;
+    padding-top: 16px;
+    flex:1;
+}
+
+.header {
+    font-weight: 600;
+    line-height: 1;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--border);
+  
+}
+
+.para {
+    margin: 16px 0;
+    font-weight:400;
+    font-size: 16px;
+}
+
+.cardContent {
+    display: flex;
+    flex:1;
+}
+
+.socials {
+    cursor:pointer;
+    padding-right: 8px;
+}
+.socials a {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    color: var(--border);
+}
+
+
+
+/* media queries */
+
+@media(max-width: 1024px) {
+    .cardContent {
+        flex-direction: column;
+    }
+    .image {
+        width: 100%;
+    }
+    .card {
+        margin-right: 10px;
+    }
+    .para {
+        margin: 8px 0;
+    }  
+    .image {
+        height: 150px;
+    }
+    .content {
+        padding-top: 8px;
+    }
+    .card{
+        margin-bottom: 12px;
+    }
+    .socials a svg {
+        height: 16px;
+    }
+    .card {
+        width: 100%;
+    }
+  } 
+  
+
+  @media(max-width: 1200px) {
+    .image {
+        height: 180px;
+    }
+    .para {
+        font-size: 12px;
+        margin: 8px 0;
+    }
+    
+}
+@media(max-width: 600px) {
+    .cardContent {
+        flex-direction: row;
+      }
+      .image {
+        height: 130px;
+        width: 30%;
+      }
+     .card {
+        margin-right: 10px;
+        width: 100%;
+     }
+     .para {
+        font-size: 10px;
+        margin: 8px 0;
+    }
+  }
+
+  @media(max-width: 767px) {
+    .image {
+        height: 130px;
+        font-size: 10px;
+    }
+    .para {
+        font-size: 10px;
+        margin: 8px 0;
+    }
+}
+
+
+
+@media(max-width:1024px) {
+    .image img:last-child {
+      
+        object-position: 50% 30%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
